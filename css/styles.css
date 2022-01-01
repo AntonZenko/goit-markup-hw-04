@@ -88,7 +88,6 @@ img {
 
 .site-nav .link:hover,
 .site-nav .link:focus {
-  text-decoration: none;
   color: var(--accent-text-color);
 }
 
@@ -354,11 +353,6 @@ img {
 .social-link:focus {
   background-color: var(--accent-text-color);
   fill: var(--base-white-color);
-}
-
-.social-link-icon {
-  width: 20px;
-  height: 20px;
 }
 
 /* customers */
