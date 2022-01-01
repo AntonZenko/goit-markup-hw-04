@@ -13,6 +13,7 @@
   --base-white-color: #ffffff;
   --hero-footer-bgc: #2f303a;
   --button-hover: #188ce8;
+  --icons-color: #afb1b8;
 
   --card-set-gap: 30px;
 }
@@ -66,12 +67,13 @@ img {
 
 .site-nav.contacts {
   display: flex;
-  margin-left: 331px;
+  margin-left: auto;
 }
 
 .site-nav .link,
 .site-nav .contacts {
-  display: block;
+  display: flex;
+  align-items: center;
   cursor: pointer;
   text-decoration: none;
   color: var(--title-text-color);
@@ -89,6 +91,13 @@ img {
   text-decoration: none;
   color: var(--accent-text-color);
 }
+
+.contacts-icon-item {
+  fill: currentColor;
+  margin-right: 10px;
+}
+
+/* header */
 
 .logo {
   display: inline-block;
@@ -126,13 +135,18 @@ img {
 
 /* hero */
 
-.hero-container {
+.hero {
+  width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
   padding-top: 200px;
   padding-bottom: 200px;
-}
-
-.hero {
-  background-color: var(--hero-footer-bgc);
+  background-color: #c4c4c4;
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/hero-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .hero-title {
@@ -176,7 +190,6 @@ img {
 .features-container {
   display: flex;
   padding-top: 94px;
-  padding-bottom: 94px;
 }
 
 .features-item {
@@ -225,18 +238,32 @@ img {
   letter-spacing: 0.03em;
 }
 
+.features-item-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 270;
+  height: 120;
+  background-color: #f5f4fa;
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+
 /* section work */
 
 .work-container {
   padding-bottom: 94px;
 }
 
-.work-caption {
+.work-caption,
+.members-caption,
+.customers-caption {
   font-weight: bold;
   font-size: 36px;
   line-height: 42px;
   text-align: center;
   margin-bottom: 50px;
+  padding-top: 94px;
 
   color: var(--title-text-color);
 }
@@ -257,17 +284,6 @@ img {
 
 /* section team */
 
-.members-caption {
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 42px;
-  text-align: center;
-  padding-top: 94px;
-  margin-bottom: 50px;
-
-  color: var(--title-text-color);
-}
-
 .photo {
   margin-bottom: 30px;
 }
@@ -282,7 +298,7 @@ img {
 }
 
 .position {
-  margin-bottom: 30px;
+  margin-bottom: 16px;
   font-size: 16px;
   line-height: 19px;
 
@@ -309,6 +325,68 @@ img {
 
 .team {
   background-color: #f5f4fa;
+}
+
+/* social-links */
+
+.social-link-list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.social-link-item + .social-link-item {
+  margin-left: 10px;
+}
+
+.social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--base-white-color);
+  fill: var(--icons-color);
+}
+
+.social-link:hover,
+.social-link:focus {
+  background-color: var(--accent-text-color);
+  fill: var(--base-white-color);
+}
+
+.social-link-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* customers */
+
+.customers-link-list {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 94px;
+}
+
+.customers-link-item + .customers-link-item {
+  margin-left: 30px;
+}
+
+.customers-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  fill: var(--icons-color);
+}
+
+.customers-link:hover {
+  fill: var(--accent-text-color);
+  border-color: var(--accent-text-color);
 }
 
 /* portfolio - example-nav */
@@ -400,13 +478,15 @@ img {
 
 /* footer */
 
+.footer {
+  background-color: var(--hero-footer-bgc);
+}
+
 .footer-container {
   padding-top: 60px;
   padding-bottom: 60px;
-}
-
-.footer {
-  background-color: var(--hero-footer-bgc);
+  display: flex;
+  align-items: baseline;
 }
 
 .footer .logo {
@@ -423,9 +503,6 @@ img {
   letter-spacing: 0.03em;
 
   color: var(--base-white-color);
-}
-
-.contact-item {
 }
 
 .address .contacts {
@@ -451,4 +528,23 @@ img {
 
 .footer-contacts .contact-item:last-child {
   margin: 0;
+}
+
+.footer-caption {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--base-white-color);
+  margin-bottom: 20px;
+}
+
+.footer-link {
+  background-color: rgba(255, 255, 255, 0.1);
+  fill: var(--base-white-color);
+}
+
+.footer-likns {
+  margin-left: 70px;
 }
