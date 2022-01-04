@@ -454,6 +454,10 @@ img {
   margin-right: 0;
 }
 
+.item:nth-child(n + 7) {
+  margin-bottom: 0;
+}
+
 .card-heading {
   font-weight: bold;
   font-size: 18px;
